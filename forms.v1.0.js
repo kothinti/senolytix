@@ -16,11 +16,7 @@ $(document).ready(function() {
         $('.custom-error').hide();
       });
 
-      if (!email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
-        $('.custom-error').text('Please enter valid email!');
-        $('.custom-error').show();
-        return;
-      }else if (!fname.match(/^[a-zA-Z]+$/)) {
+      if (!fname.match(/^[a-zA-Z]+$/)) {
         $('.custom-error').text('Please enter valid name!');
         $('.custom-error').show();
         return;
@@ -28,6 +24,10 @@ $(document).ready(function() {
     	$('.custom-error').text('Please enter valid phone number!');
     	$('.custom-error').show();
     	return;
+      }else if (!email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+        $('.custom-error').text('Please enter valid email!');
+        $('.custom-error').show();
+        return;
       }else if (websitex != "") {
           return;
       }else{
